@@ -12,6 +12,7 @@ from dbcat.catalog.models import CatColumn
 from dbcat.catalog.pii_types import PiiType
 import re
 
+
 class CC(PiiType):
     name = "Credit Card number"
     type = "credit_card_number"
@@ -21,7 +22,7 @@ class CC(PiiType):
 @register_detector
 class ColumnCreditCardDetector(MetadataDetector):
 
-    regex = re.compile("kimlik_no", re.IGNORECASE)
+    regex = re.compile("credit_card_no", re.IGNORECASE)
     name = "ColumnNameCreditCardDetector"
 
     def detect(self, column: CatColumn) -> Optional[PiiType]:
