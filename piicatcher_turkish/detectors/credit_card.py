@@ -14,8 +14,8 @@ import re
 
 
 class CC(PiiType):
-    name = "Credit Card number"
-    type = "credit_card_number"
+    name = "Credit Card"
+    type = "credit_card"
     pass
 
 

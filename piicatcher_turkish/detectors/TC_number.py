@@ -12,9 +12,10 @@ from dbcat.catalog.models import CatColumn
 from dbcat.catalog.pii_types import PiiType
 import re
 
+
 class TC(PiiType):
-    name = "TC number"
-    type = "tc_number"
+    name = "TC"
+    type = "TC"
     pass
 
 
