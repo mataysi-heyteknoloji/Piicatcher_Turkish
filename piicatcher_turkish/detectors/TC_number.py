@@ -11,7 +11,8 @@ from typing import Optional
 from dbcat.catalog.models import CatColumn
 from dbcat.catalog.pii_types import PiiType
 import re
-from . import TC_number
+from piicatcher_turkish.detectors import TC_number
+
 
 @register_detector
 class ColumnTCDetector(MetadataDetector):

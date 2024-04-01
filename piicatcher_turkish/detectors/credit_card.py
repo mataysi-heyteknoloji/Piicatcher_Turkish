@@ -11,7 +11,7 @@ from typing import Optional
 from dbcat.catalog.models import CatColumn
 from dbcat.catalog.pii_types import PiiType
 import re
-from . import CC_number
+from piicatcher_turkish.detectors import CC_number
 
 
 @register_detector
