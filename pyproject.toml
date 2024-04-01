@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "piicatcher_turkish"
-version = "0.1"
+version = "0.2"
 description = "custom detectors"
 authors = ["mat"]
 classifiers = [
