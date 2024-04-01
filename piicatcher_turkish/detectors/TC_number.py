@@ -11,7 +11,12 @@ from typing import Optional
 from dbcat.catalog.models import CatColumn
 from dbcat.catalog.pii_types import PiiType
 import re
-from piicatcher_turkish.detectors import TC_number
+
+
+class TC_number(PiiType):
+    name = "TC number"
+    type = "TC_number"
+    pass
 
 
 @register_detector

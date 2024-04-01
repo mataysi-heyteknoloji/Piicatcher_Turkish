@@ -11,7 +11,12 @@ from typing import Optional
 from dbcat.catalog.models import CatColumn
 from dbcat.catalog.pii_types import PiiType
 import re
-from piicatcher_turkish.detectors import CC_number
+
+
+class CC_number(PiiType):
+    name = "Credit Card"
+    type = "credit_card"
+    pass
 
 
 @register_detector
