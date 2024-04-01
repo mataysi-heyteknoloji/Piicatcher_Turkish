@@ -11,13 +11,7 @@ from typing import Optional
 from dbcat.catalog.models import CatColumn
 from dbcat.catalog.pii_types import PiiType
 import re
-
-
-class TC(PiiType):
-    name = "TC"
-    type = "TC"
-    pass
-
+from . import TC_number
 
 @register_detector
 class ColumnTCDetector(MetadataDetector):
@@ -27,7 +21,7 @@ class ColumnTCDetector(MetadataDetector):
 
     def detect(self, column: CatColumn) -> Optional[PiiType]:
         if self.regex.match(column.name) is not None:
-            return TC()
+            return TC_number()
 
         return None
 
@@ -39,6 +33,6 @@ class DatumTCDetector(DatumDetector):
 
     def detect(self, column: CatColumn, datum: str) -> Optional[PiiType]:
         if self.regex.match(datum) is not None:
-            return TC()
+            return TC_number()
 
         return None
